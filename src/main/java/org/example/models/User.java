@@ -6,25 +6,25 @@ public class User {
     private Integer id;
     private String name;
     private String surname;
-    private LocalDate birthdate;
+    private LocalDate birthDate;
     private String login;
     private String password;
-    private Boolean is_blocked;
+    private Boolean isBlocked;
 
-    public User(int id, String name, String surname, LocalDate birthdate, String login, String password, boolean is_blocked) {
+    public User(Integer id, String name, String surname, LocalDate birthDate, String login, String password,  Boolean isBlocked) {
         this.id = id;
         this.name = name;
         this.surname = surname;
-        this.birthdate = birthdate;
+        this.birthDate = birthDate;
         this.login = login;
         this.password = password;
-        this.is_blocked = is_blocked;
+        this.isBlocked = isBlocked;
 
     }
-    public int getId() {
+    public Integer getId() {
         return id;
     }
-    public void setId(int id) {
+    public void setId(Integer id) {
         this.id = id;
     }
     public String getName() {
@@ -39,11 +39,11 @@ public class User {
     public void setSurname(String surname) {
         this.surname = surname;
     }
-    public LocalDate getBirthdate() {
-        return birthdate;
+    public LocalDate getBirthDate() {
+        return birthDate;
     }
-    public void setBirthdate(LocalDate birthdate) {
-        this.birthdate = birthdate;
+    public void setBirthDate(LocalDate birthDate) {
+        this.birthDate = birthDate;
     }
     public String getLogin() {
         return login;
@@ -57,10 +57,14 @@ public class User {
     public void setPassword(String password) {
         this.password = password;
     }
-    public boolean isIs_blocked() {
-        return is_blocked;
+    public Boolean getIsBlocked() {
+        return isBlocked;
     }
-    public void setIs_blocked(boolean is_blocked) {
-        this.is_blocked = is_blocked;
+    public void setIsBlocked(Boolean isBlocked) {
+        this.isBlocked = isBlocked;
+    }
+    @Override
+    public String toString() {
+        return "User [id=" + id + ", name=" + name + ", surname=" + surname + ", birth_date=" + birthDate + ", login=" + login + ", password=" + password + ", is_blocked=" + isBlocked + "]";
     }
 }
