@@ -1,16 +1,25 @@
 package org.example.models;
 
+import java.math.BigDecimal;
+
 public class Good {
     private Integer id;
     private String name;
     private String description;
-    private Integer price;
-    public Good(Integer id, String name, String description, Integer price) {
+    private BigDecimal price;
+    public Good(Integer id, String name, String description, BigDecimal price) {
         this.id = id;
         this.name = name;
         this.description = description;
         this.price = price;
     }
+
+    public Good(String name, String description, BigDecimal price) {
+        this.name = name;
+        this.description = description;
+        this.price = price;
+    }
+
     public Integer getId() {
         return id;
     }
@@ -29,10 +38,15 @@ public class Good {
     public void setDescription(String description) {
         this.description = description;
     }
-    public Integer getPrice() {
+    public BigDecimal getPrice() {
         return price;
     }
-    public void setPrice(Integer price) {
+    public void setPrice(BigDecimal price) {
         this.price = price;
+    }
+
+    @Override
+    public String toString() {
+        return "Good [ id=" + id + ", name=" + name + ", description=" + description + ", price=" + price + "]";
     }
 }

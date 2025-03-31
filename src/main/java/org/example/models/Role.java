@@ -7,6 +7,11 @@ public class Role {
         this.id = id;
         this.name = name;
     }
+
+    public Role(String name) {
+        this.name = name;
+    }
+
     public Integer getId() {
         return id;
     }
@@ -18,5 +23,10 @@ public class Role {
     }
     public void setName(String name) {
         this.name = name;
+    }
+
+    @Override
+    public String toString() {
+        return "Good [ id=" + id + ", name=" + name + "]";
     }
 }

@@ -1,57 +1,90 @@
 package org.example.models;
 
-import java.util.Date;
+import java.sql.Timestamp;
 
 public class Order {
     private Integer id;
-    private String number;
+    private Integer number;
     private String status;
-    private Integer user_id;
-    private Date created_at;
-    private Date updated_at;
-    public Order(Integer id, String number, String status, Integer user_id, Date created_at, Date updated_at) {
+    private Integer userId;
+    private Timestamp createdAt;
+    private Timestamp updatedAt;
+
+    public Order(Integer id, Integer number, String status, Integer userId, Timestamp createdAt, Timestamp updatedAt) {
         this.id = id;
         this.number = number;
         this.status = status;
-        this.user_id = user_id;
-        this.created_at = created_at;
-        this.updated_at = updated_at;
+        this.userId = userId;
+        this.createdAt = createdAt;
+        this.updatedAt = updatedAt;
     }
+
+    public Order( Integer number, String status, Integer userId, Timestamp createdAt, Timestamp updatedAt) {
+        this.number = number;
+        this.status = status;
+        this.userId = userId;
+        this.createdAt = createdAt;
+        this.updatedAt = updatedAt;
+    }
+
+    public Order(Integer number, String status, Integer userId, Timestamp updatedAt) { // апдейт
+        this.number = number;
+        this.status = status;
+        this.userId = userId;
+        this.updatedAt = updatedAt;
+    }
+
     public Integer getId() {
         return id;
     }
+
     public void setId(Integer id) {
         this.id = id;
     }
-    public String getNumber() {
+
+    public Integer getNumber() {
         return number;
     }
-    public void setNumber(String number) {
+
+    public void setNumber(Integer number) {
         this.number = number;
     }
+
     public String getStatus() {
         return status;
     }
+
     public void setStatus(String status) {
         this.status = status;
     }
-    public Integer getUser_id() {
-        return user_id;
+
+    public Integer getUserId() {
+        return userId;
     }
-    public void setUser_id(Integer user_id) {
-        this.user_id = user_id;
+
+    public void setUserId(Integer userId) {
+        this.userId = userId;
     }
-    public Date getCreated_at() {
-        return created_at;
+
+    public Timestamp getCreatedAt() {
+        return createdAt;
     }
-    public void setCreated_at(Date created_at) {
-        this.created_at = created_at;
+
+    public void setCreatedAt(Timestamp createdAt) {
+        this.createdAt = createdAt;
     }
-    public Date getUpdated_at() {
-        return updated_at;
+
+    public Timestamp getUpdatedAt() {
+        return updatedAt;
     }
-    public void setUpdated_at(Date updated_at) {
-        this.updated_at = updated_at;
+
+    public void setUpdateAt(Timestamp updatedAt) {
+        this.updatedAt = updatedAt;
+    }
+
+    @Override
+    public String toString() {
+        return "Order [ id=" + id + ", number=" + number + ", status=" + status + ", user_id" + userId + ", created_at=" + createdAt + ", updated_at=" + updatedAt + "]";
     }
 
 }
