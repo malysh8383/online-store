@@ -86,5 +86,4 @@ public class Order {
     public String toString() {
         return "Order [ id=" + id + ", number=" + number + ", status=" + status + ", user_id" + userId + ", created_at=" + createdAt + ", updated_at=" + updatedAt + "]";
     }
-
 }

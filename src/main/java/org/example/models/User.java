@@ -1,5 +1,6 @@
 package org.example.models;
 
+import java.sql.Connection;
 import java.time.LocalDate;
 
 public class User {
@@ -19,12 +20,15 @@ public class User {
         this.login = login;
         this.password = password;
         this.isBlocked = isBlocked;
-
     }
 
-    public Integer getId() { return id; }
+    public Integer getId() {
+        return id;
+    }
 
-    public void setId(Integer id) { this.id = id; }
+    public void setId(Integer id) {
+        this.id = id;
+    }
 
     public String getName() {
         return name;
@@ -73,6 +77,7 @@ public class User {
     public void setIsBlocked(Boolean isBlocked) {
         this.isBlocked = isBlocked;
     }
+
     @Override
     public String toString() {
         return "User [ id=" + id + ", name=" + name + ", surname=" + surname + ", birth_date=" + birthDate + ", login=" + login + ", password=" + password + ", is_blocked=" + isBlocked + "]";
